@@ -1,6 +1,7 @@
 import pandas as pd
 
 def nth_highest_salary(employee: pd.DataFrame, N: int) -> pd.DataFrame:
+    # bad time complexity due to the usage of try-catch
     if (N <= 0):
         query = None
         output = pd.DataFrame([[query]], columns=[f"getNthHighestSalary({N})"])
